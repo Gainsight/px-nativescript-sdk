@@ -1,0 +1,48 @@
+{
+  "name": "nativescript-gainsight-px",
+  "version": "1.4.5",
+  "description": "Gainsight PX NativeScript plugin.",
+  "main": "gainsight-px-bridge",
+  "typings": "index.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "6.0.0",
+      "ios": "6.0.1"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptrinsic/nativescript-sdk.git"
+  },
+  "scripts": {
+    "tsc": "npm i && tsc",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
+    "prepack": "npm run build.native",
+    "build": "npm run tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
+    
+  },
+  "keywords": [
+    "NativeScript",
+    "JavaScript",
+    "Android",
+    "iOS"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://www.gainsight.com/product-experience/",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "tns-core-modules": "^6.0.0",
+    "tns-platform-declarations": "^6.0.0",
+    "typescript": "~3.4.5",
+    "prompt": "^1.0.0",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.12.1",
+    "semver": "^5.6.0"
+  },
+  "dependencies": {
+    
+  },
+  "bootstrapper": "nativescript-plugin-seed"
+}

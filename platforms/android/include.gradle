@@ -1,0 +1,18 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+android {
+	
+}
+
+repositories {
+    maven {
+        url "https://github.com/Gainsight/px-android/raw/main/"
+    }
+}
+
+dependencies {
+    implementation 'com.gainsight.px:mobile-sdk:1.4.5'
+    // Describe plugin native Android dependencies like
+	// implementation "groupName:pluginName:ver" 
+    // EXAMPLE: implementation "com.facebook.fresco:fresco:0.9.0+"
+}
